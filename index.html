@@ -1,47 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VEERA Services</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Arsha Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-top: -200px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 200px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        color: #fff;
+    }
+
+    .btn:hover {
+        transform: scale(1.1);
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+    }
+
+    #services .container.section-title h2 {
+        position: relative;
+        margin-top: -50px;
+        margin-bottom: 10px;
+    }
+
+    #services .container.section-title h2::after {
+        content: '';
+        position: absolute;
+        bottom: 20px;
+        left: 25%;
+        transform: translateX(-50%);
+        width: 25%;
+        height: 2px;
+        background-color: #3a8fd1;
+    }
+
+    #services .container.section-title h2::before {
+        content: none;
+    }
+
+    #services .container.section-title p {
+        text-align: center;
+        font-family: 'Vazirmatn', sans-serif;
+        color: #555;
+        font-size: 18px;
+        line-height: 1;
+        margin-top: 1px;
+        margin-bottom: 10px;
+    }
+
+    #services .services-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 50px;
+        height: auto;
+        box-sizing: border-box;
+        overflow-y: auto;
+        margin-top: 10px;
+    }
+
+    #services .service-box {
+        width: 23%;
+        margin: 15px 0;
+        padding: 15px;
+        text-align: center;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.3s ease;
+        box-sizing: border-box;
+        height: 350px;
+        background: linear-gradient(135deg, #ecedee, #b1b4b7);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+    }
+
+    #services .service-box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 16px 50px rgba(0, 0, 0, 0.2);
+        background-color: #e0f3ff;
+    }
+
+    #services .service-box img {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #services .service-box:hover img {
+        transform: scale(1.1);
+    }
+
+    #services .service-box h3 {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+    }
+
+    #services .service-box h3::after {
+        content: '';
+        position: absolute;
+        bottom: -9px;
+        left: 50%;
+        width: 60%;
+        height: 2px;
+        background-color: #4e8dbe;
+        transform: translateX(-50%);
+    }
+
+    #services .service-link {
+        text-decoration: none;
+        color: #007bff;
+        font-size: 18px;
+        font-weight: bold;
+        transition: color 0.3s ease;
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+    #services .service-link:hover {
+        color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+        #services .service-box {
+            width: 48%;
         }
-        h1 {
-            color: #4CAF50;
+    }
+
+    @media (max-width: 480px) {
+        #services .service-box {
+            width: 100%;
+            margin-bottom: 20px;
         }
-        .service {
-            margin: 20px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            display: inline-block;
-            width: 300px;
-            text-align: left;
-        }
-    </style>
+    }
+    .image-no-bg {
+    width: 85%; /* عرض تصویر */
+    border-radius: 15px; /* لبه‌های گرد */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* سایه برای عمق بیشتر */
+    transition: transform 0.3s ease; /* افکت تغییر حالت هنگام هاور */
+    background-color: transparent; /* تنظیم پس‌زمینه شفاف */
+  }
+
+  /* افکت هاور برای بزرگنمایی */
+  .image-no-bg:hover {
+    transform: scale(1.05); /* بزرگنمایی تصویر هنگام هاور */
+  }
+  .service-content .icon {
+  margin-left: 22px; /* فاصله افقی بین آیکون و متن */
+}
+.service-content .text {
+  margin-top: 12px; /* تنظیم فاصله متن از آیکون */
+}
+  
+.service-content .text h4 {
+  font-size: 14px; /* کاهش اندازه فونت عنوان */
+}
+
+.service-content .text p {
+  font-size: 12px; /* کاهش اندازه فونت توضیحات */
+}
+
+
+
+</style>
+
+
+  <!-- =======================================================
+  * Template Name: Arsha
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
-<body>
-    <h1>Welcome to VEERA Services</h1>
-    <div class="service">
-        <h2>Web Design</h2>
-        <p>Professional web design services for your business.</p>
-    </div>
-    <div class="service">
-        <h2>Database Design</h2>
-        <p>Efficient and scalable database solutions.</p>
-    </div>
-    <div class="service">
-        <h2>Digital Marketing</h2>
-        <p>Grow your online presence with tailored marketing strategies.</p>
-    </div>
-    <div class="service">
-        <h2>Graphic Design</h2>
-        <p>Creative designs to elevate your brand identity.</p>
-    </div>
+<body class="index-page">
+
+    <main class="main">
+
+  <!-- Services Section -->
+  <section id="services" class="services section light-background">
+
+    <!-- Section Title -->
+   <!-- عنوان بخش -->
+   <div class="container section-title" data-aos="fade-up">
+     <h2 style="text-align: center; font-family: 'Poppins', sans-serif; font-weight: 700; color: #333; font-size: 38px; margin-top: -50px; margin-bottom: 10px; border: none; position: relative;">
+       خدمات ما
+     </h2>
+     <p style="text-align: center; font-family: 'Vazirmatn', sans-serif; color: #555; font-size: 18px; line-height: 0.5; margin-top: 10px; margin-bottom: -50px;">
+       ما با ارائه خدمات حرفه‌ای و نوآورانه، به رشد و موفقیت کسب‌وکار شما کمک می‌کنیم.
+     </p>
+   </div>
+   
+   
+   <!-- ردیف‌های محتوا -->
+   <div class="container">
+     <!-- کارت اول -->
+     <div class="services-container">
+       <!-- بخش طراحی وب‌سایت -->
+       <div class="service-box">
+           <a href="service.html#web-design" class="service-link">
+               <img src="assets/img/IMG_0181.PNG" alt="طراحی وب‌سایت">
+               <h3>طراحی وب‌سایت</h3>
+           </a>
+       </div>
+   
+       <!-- بخش دیجیتال مارکتینگ -->
+       <div class="service-box">
+           <a href="service.html#digital-marketing" class="service-link">
+               <img src="assets/img/IMG_0184.PNG" alt="دیجیتال مارکتینگ">
+               <h3>دیجیتال مارکتینگ</h3>
+           </a>
+       </div>
+   
+       <!-- بخش مدیریت دیتابس -->
+       <div class="service-box">
+           <a href="service.html#database-managment" class="service-link">
+               <img src="assets/img/IMG_0194.PNG" alt="مدیریت دیتابس">
+               <h3> مدیریت دیتابس </h3>
+           </a>
+       </div>
+   
+       <!-- بخش طراحی گرافیکی -->
+       <div class="service-box">
+           <a href="service.html#graphic-design" class="service-link">
+               <img src="assets/img/IMG_0188.PNG" alt="طراحی گرافیکی">
+               <h3>طراحی گرافیکی</h3>
+           </a>
+       </div>
+   </div>
+</main>
+
+</footer>
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // پیدا کردن المان بخش موردنظر
+  const targetElement = document.getElementById("web-design");
+
+  // بررسی اگر المان وجود دارد
+  if (targetElement) {
+    // محاسبه موقعیت و اسکرول به مرکز
+    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+    const offset = window.innerHeight / 2 - targetElement.offsetHeight / 2;
+
+    window.scrollTo({
+      top: elementPosition - offset,
+      behavior: "smooth" // اسکرول نرم
+    });
+  }
+});
+</script>
+
+
+
+
+
+
+
 </body>
+
 </html>
