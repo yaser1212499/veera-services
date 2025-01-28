@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>صفحه نمونه</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css"
+      rel="stylesheet"
+    />
+    />
+    <!-- Slick Slider CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <style>
+      body,
+      html {
+        background-color: white; /* پس‌زمینه‌ی کلی صفحه سفید */
+        margin: 0;
+        padding: 0;
+      }
+
+      .main-content {
+        background-color: white; /* پس‌زمینه‌ی بخش main-content سفید */
+      }
+
+      .white-section {
+        background-color: white; /* پس‌زمینه‌ی بخش سفید نیز سفید */
+      }
+
+      .slider {
+        background-color: white; /* پس‌زمینه‌ی اسلایدر سفید */
+      }
+
+      /* استایل کلی اسلایدر */
+      .slider {
+        width: 30%;
+        margin: auto;
+        position: relative;
+        overflow: hidden; /* جلوگیری از نمایش بخش‌های اضافی تصویر */
+      }
+
+      /* تنظیم اندازه تصویر */
+      .slick-slide img {
+        width: 100%; /* تمام عرض اسلایدر را پر می‌کند */
+        height: auto; /* نسبت تصویر را حفظ می‌کند */
+        border-radius: 10px;
+      }
+
+      /* تنظیم دکمه‌های ناوبری (پیش و بعد) */
+      .slick-prev,
+      .slick-next {
+        background-color: rgba(231, 76, 60, 0.8);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        z-index: 1;
+      }
+      .slick-prev::before,
+      .slick-next::before {
+        color: white;
+        font-size: 20px;
+      }
+
+      /* استایل دکمه‌ها در حالت hover */
+      .slick-prev:hover,
+      .slick-next:hover {
+        background-color: rgba(231, 76, 60, 1);
+      }
+      .white-section,
+      .slider {
+        background-color: white;
+      }
+      .main-content {
+        background-color: white;
+      }
+
+      body {
+        background-color: white; /* پس‌زمینه روشن */
+        margin: 0;
+        font-family: "Vazirmatn", sans-serif;
+      }
+
+      /* هدر */
+      header {
+        background-color: #ffffff; /* پس‌زمینه سفید */
+        padding: 10px 0; /* ارتفاع کم */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* سایه ملایم */
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      header nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* لوگو */
+      .logo {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: #e74c3c; /* رنگ قرمز */
+      }
+
+      .logo img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+
+      /* منو */
+      nav div {
+        display: flex;
+        gap: 20px;
+      }
+
+      nav a {
+        color: #333;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+
+      nav a:hover {
+        background-color: #e74c3c;
+        color: white;
+      }
+
+      /* جستجو */
+      .search-bar {
+        display: flex;
+        align-items: center;
+      }
+
+      .search-bar input {
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      .search-bar button {
+        padding: 8px 12px;
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .search-bar button:hover {
+        background-color: #c0392b;
+      }
+
+      /* سبد خرید */
+      .cart {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+      }
+
+      .cart-icon {
+        font-size: 20px;
+        color: #e74c3c;
+      }
+
+      .cart-count {
+        font-size: 14px;
+        font-weight: bold;
+        background-color: #e74c3c;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 50%;
+      }
+
+      /* بخش اصلی محتوا */
+      .main-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1700px;
+        margin: 70px auto;
+        padding: 0 2px;
+      }
+
+      /* بخش سفید (متن و دکمه‌ها) */
+      .white-section {
+        flex: 1;
+        padding: 40px;
+        background-color: #ffffff;
+        border-radius: 10px;
+      }
+
+      .text-content h1 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .text-content p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 30px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .buttons a {
+        padding: 12px 24px;
+        background-color: #e74c3c;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .buttons a:hover {
+        background-color: #c0392b;
+      }
+      .single-image {
+        width: 45%;
+        margin: auto;
+        text-align: left;
+      }
+
+      .single-image img {
+        width: 50%;
+        height: 400px;
+        border-radius: 5px;
+      }
+      /* استایل کلی بخش special-offers */
+      .special-offers {
+        background: linear-gradient(135deg, #f4eceb, hwb(7 92% 4%));
+        padding: 30px;
+        border-radius: 15px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* استایل هدر (عنوان و تایمر) */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+      }
+
+      .header-info {
+        text-align: right;
+        color: white;
+        flex-shrink: 0;
+        width: -40px;
+      }
+
+      .header-info h2 {
+        font-size: 32px;
+        margin: 20px 0 15px 0;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .timer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 20px;
+      }
+
+      .time-box {
+        display: flex;
+        gap: 5px;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 15px;
+        border-radius: 10px;
+        font-family: "Courier New", monospace;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .time-box span {
+        padding: 8px 12px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        font-size: 24px;
+      }
+
+      /* استایل اسلایدر */
+      .slider-container {
+        flex-grow: 1;
+        overflow: hidden;
+      }
+
+      .slick-slider {
+        display: flex;
+        gap: 20px;
+      }
+
+      /* استایل باکس‌ها */
+      .offer-box {
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        width: 200px; /* عرض باکس‌ها کوچک‌تر شده است */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        margin: 0 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .offer-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+      }
+
+      .offer-box img {
+        width: 100%;
+        height: 225px; /* ارتفاع تصویر کوچک‌تر شده است */
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: -17px;
+      }
+
+      .offer-box h3 {
+        font-size: 20px;
+        margin: 10px 0;
+        color: #333;
+        font-weight: 600;
+      }
+
+      .offer-box p {
+        font-size: 14px;
+        color: #555;
+        margin: 0px 0;
+      }
+
+      .buy-button {
+        background-color: #27ae60;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 15px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .buy-button:hover {
+        background-color: #219653;
+        transform: scale(1.05);
+      }
+
+      .details {
+        margin-top: 15px;
+        font-size: 12px;
+        color: #777;
+        text-align: right;
+      }
+
+      /* واکنش‌گرایی */
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .header-info {
+          width: 100%;
+          text-align: center;
+        }
+
+        .offer-box {
+          width: 180px;
+        }
+
+        .offer-box img {
+          height: 100px;
+        }
+      }
+
+      /* فونت حرفه‌ای */
+      @import url("https://cdn.fontcdn.ir/Font/Persian/IranSansX/IranSansX.css");
+
+      /* فونت حرفه‌ای */
+      @import url("https://fonts.cdnfonts.com/css/dubai");
+
+      body {
+        font-family: "Dubai", sans-serif;
+      }
+
+      /* عنوان بخش */
+      .section-title {
+        font-size: 30px;
+        font-weight: bold;
+        color: #b78c28;
+        text-align: center;
+        padding: 0px;
+        background: linear-gradient(90deg, #0d0d0d, #d4af37);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        display: inline-block;
+        margin: auto;
+      }
+
+      /* استایل کلی بخش محصولات */
+      .products {
+        padding: 2rem;
+        background-color: #f9f9f9;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(to right, #ff5733, #c0392b);
+        border-radius: 2px;
+      }
+
+      /* گرید محصولات */
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        max-width: 1200px;
+        margin: auto;
+        padding: 1rem;
+      }
+
+      /* کارت محصول با افکت شیشه‌ای */
+      .product-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        text-align: center;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .product-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      /* تصویر محصول */
+      .product-image {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .product-image img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .product-card:hover .product-image img {
+        transform: scale(1.1);
+      }
+
+      /* نشان ویژه */
+      .badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: linear-gradient(to right, #ff5733, #c0392b);
+        color: white;
+        padding: 5px 15px;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      /* اطلاعات محصول */
+      .product-info {
+        padding: 15px 0;
+      }
+
+      .product-info h3 {
+        font-size: 22px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .product-info p {
+        font-size: 15px;
+        color: #777;
+        margin-bottom: 15px;
+      }
+
+      /* امتیاز */
+      .rating {
+        color: #ffcc00;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      /* قیمت */
+      .price {
+        font-size: 20px;
+        font-weight: bold;
+        color: #b78c28;
+        margin-bottom: 15px;
+      }
+
+      .old-price {
+        text-decoration: line-through;
+        color: #888;
+        margin-left: 10px;
+      }
+
+      .new-price {
+        color: #c31010;
+        font-weight: bold;
+      }
+
+      /* دکمه‌ها */
+      .product-actions {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .buy-btn,
+      .details-btn {
+        border: none;
+        padding: 12px 24px;
+        border-radius: 30px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .buy-btn {
+        background: linear-gradient(to right, #ff5733, #c0392b);
+        color: white;
+      }
+
+      .buy-btn:hover {
+        background: linear-gradient(to right, #c0392b, #9b2418);
+      }
+
+      .details-btn {
+        background: linear-gradient(to right, #444, #222);
+        color: white;
+      }
+
+      .details-btn:hover {
+        background: linear-gradient(to right, #222, #000);
+      }
+
+      /* استایل‌های اضافه‌شده */
+      .products-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .product-box {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        padding: 15px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .product-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .image-container {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .product-box:hover .image-container img {
+        transform: scale(1.1);
+      }
+
+      .product-name {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #333;
+      }
+
+      .product-price {
+        font-size: 16px;
+        color: #28a745;
+        margin: 10px 0;
+      }
+
+      .buy-button {
+        background: linear-gradient(to right, #ff5733, #c0392b);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      .buy-button:hover {
+        background: linear-gradient(to right, #c0392b, #9b2418);
+      }
+
+      .image-container {
+        width: 100%;
+        height: 200px; /* ارتفاع ثابت برای باکس عکس */
+        overflow: hidden;
+        border-radius: 8px;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* حفظ نسبت ابعاد تصویر */
+      }
+
+      .product-name {
+        font-size: 18px;
+        margin: 10px 0;
+      }
+
+      .product-price {
+        font-size: 16px;
+        color: #28a745;
+        margin: 10px 0;
+      }
+
+      .buy-button {
+        background-color: #c53c32;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      .buy-button:hover {
+        background-color: #b92a2a;
+      }
+      /* استایل بخش "چرا ما بهترین هستیم" */
+      .why-us {
+        text-align: center;
+        padding: 60px 20px;
+        background-color: #f9f9f9;
+      }
+
+      .why-us h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+        color: #333;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .feature {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .feature:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .feature-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #c92317;
+        color: #fff;
+        font-size: 32px;
+      }
+
+      .feature h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: #333;
+      }
+
+      .feature p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.6;
+      }
+      /* استایل بخش دسته‌بندی محصولات */
+      .special-offers {
+        padding: 40px 60px;
+        background-color: #f9f9f9;
+        text-align: center;
+      }
+
+      .special-offers .header h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: 34px;
+        font-weight: bold;
+        background: linear-gradient(
+          90deg,
+          #0b0b0b,
+          #0a0909
+        ); /* گرادیانت نارنجی */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0px;
+      }
+      .categories {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .category-box {
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .category-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .category-box img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .category-box h3 {
+        font-size: 24px;
+        margin: 20px 0 10px;
+        color: #333;
+      }
+
+      .category-box p {
+        font-size: 16px;
+        color: #666;
+        padding: 0 20px;
+        line-height: 1.6;
+      }
+
+      .category-box .view-button {
+        display: inline-block;
+        margin: 20px 0;
+        padding: 10px 20px;
+        background-color: #8b1d19;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .category-box .view-button:hover {
+        background-color: #218838;
+      }
+      @font-face {
+        font-family: "Vazir";
+        src: url("fonts/Vazir.woff2") format("woff2"),
+          url("fonts/Vazir.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      /* استایل‌های پایه برای دستگاه‌های کوچکتر */
+      @media (max-width: 768px) {
+        body {
+          font-size: 14px; /* تنظیم اندازه فونت برای موبایل */
+        }
+
+        .main-content {
+          flex-direction: column; /* چینش عمودی برای محتوا */
+          align-items: center;
+        }
+
+        .logo {
+          font-size: 18px; /* کاهش اندازه فونت لوگو در موبایل */
+        }
+
+        .slider {
+          width: 100%; /* اسلایدر در موبایل تمام عرض صفحه را بگیرد */
+          margin: 10px 0;
+        }
+
+        .slick-prev,
+        .slick-next {
+          width: 30px;
+          height: 30px;
+          font-size: 16px; /* اندازه دکمه‌ها در موبایل */
+        }
+
+        .white-section {
+          width: 100%; /* عرض بخش‌های سفید در موبایل */
+          padding: 20px;
+        }
+
+        .search-bar input {
+          width: 100%; /* جستجو در موبایل تمام عرض را بگیرد */
+        }
+
+        .product-grid {
+          grid-template-columns: 1fr; /* فقط یک ستون برای موبایل */
+          padding: 0 10px; /* کاهش فاصله‌ها */
+        }
+
+        .product-card {
+          margin: 10px 0; /* فاصله‌های مناسب در موبایل */
+        }
+
+        .header-info {
+          width: 100%;
+          text-align: center;
+        }
+
+        .offer-box {
+          width: 100%; /* کاهش عرض باکس‌ها در موبایل */
+        }
+
+        .section-title {
+          font-size: 24px; /* کاهش اندازه عنوان */
+        }
+      }
+
+      /* استایل‌های واکنش‌گرا برای تبلت */
+      @media (max-width: 1024px) {
+        .main-content {
+          flex-direction: row; /* چینش افقی برای تبلت */
+          justify-content: center;
+        }
+
+        .slider {
+          width: 80%; /* اسلایدر عرض کمتری در تبلت */
+        }
+
+        .product-grid {
+          grid-template-columns: repeat(2, 1fr); /* دو ستون برای تبلت */
+        }
+
+        .white-section {
+          width: 80%; /* عرض بیشتر بخش سفید */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- لوگو -->
+        <div class="logo">
+          <img src="logo.png" alt="لوگو" />
+          <span>ARG</span>
+        </div>
+
+        <!-- منو -->
+        <div>
+          <a href="#">خانه</a>
+          <a href="#">درباره ما</a>
+          <a href="#">خدمات</a>
+          <a href="#">تماس با ما</a>
+        </div>
+
+        <!-- جستجو -->
+        <div class="search-bar">
+          <input type="text" placeholder="جستجو..." />
+          <button type="submit">🔍</button>
+        </div>
+
+        <!-- سبد خرید -->
+        <div class="cart">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-count">3</span>
+        </div>
+      </nav>
+    </header>
+
+    <div class="main-content">
+      <!-- بخش سفید (متن و دکمه‌ها) -->
+      <div class="white-section">
+        <div class="text-content">
+          <h1>آزادترین شاپ تخصصی فریش، قالب و موکت</h1>
+          <p>
+            انوم اسپوم متن ساختمان با تولید سالمان نامفووم و صنعت چاپ به استفاده
+            از طراحی کافیک است. چاپگاهها و متون بناک روزنامه و محله در ستون و
+            سطوحشان که اتم است با استفاده از طراحی کافیک انوم اسپوم متن ساختمان
+            با تولید سالمان نامفووم و صنعت چاپ و یا استفاده از طراحی کافیک است.
+            چاپگاهها و متون بناک روزنامه و محله در ستون است.
+          </p>
+          <div class="buttons">
+            <a href="#" class="buy-button">خرید کنید</a>
+            <a href="#" class="about-button">درباره ما</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- بخش اسلایدر -->
+      <!-- بخش تصویر ساده -->
+      <div class="single-image">
+        <img src="carpet-pic2.png" alt="تصویر نمونه" />
+      </div>
+    </div>
+    <div style="border-bottom: 2px solid black; margin: 20px 0"></div>
+    <!-- بخش پیشنهاد ویژه -->
+    <section class="special-offers">
+      <div class="header">
+        <h2>دسته‌بندی محصولات</h2>
+      </div>
+      <div class="categories">
+        <!-- دسته‌بندی ۱ -->
+        <div class="category-box" id="category-1">
+          <img src="AREA3.jpg" alt="دسته‌بندی ۱" />
+          <h3>دسته‌بندی ۱</h3>
+          <p>توضیحات کوتاه درباره این دسته‌بندی...</p>
+          <button class="view-button">
+            <a
+              href="product-page.html#category-1"
+              style="text-decoration: none; color: rgb(253, 247, 247)"
+              >مشاهده محصولات</a
+            >
+          </button>
+        </div>
+
+        <!-- دسته‌بندی ۲ -->
+        <div class="category-box">
+          <img src="Untitled copy copy.jpg" alt="دسته‌بندی ۲" />
+          <h3>دسته‌بندی ۲</h3>
+          <p>توضیحات کوتاه درباره این دسته‌بندی...</p>
+          <button class="view-button">مشاهده محصولات</button>
+        </div>
+
+        <!-- دسته‌بندی ۳ -->
+        <div class="category-box">
+          <img src="XXL.webp" alt="دسته‌بندی ۳" />
+          <h3>دسته‌بندی ۳</h3>
+          <p>توضیحات کوتاه درباره این دسته‌بندی...</p>
+          <button class="view-button">مشاهده محصولات</button>
+        </div>
+
+        <!-- دسته‌بندی ۴ -->
+        <div class="category-box">
+          <img src="carpet-pic2.png" alt="دسته‌بندی ۴" />
+          <h3>دسته‌بندی ۴</h3>
+          <p>توضیحات کوتاه درباره این دسته‌بندی...</p>
+          <button class="view-button">مشاهده محصولات</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="products">
+      <h2 class="section-title">✨ فرش‌های لوکس ما ✨</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="carpet-pic2.png" alt="فرش مدرن" />
+            <span class="badge">🔥 پرفروش</span>
+          </div>
+          <div class="product-info">
+            <h3>فرش مدرن</h3>
+            <p>ترکیب خلاقیت و کیفیت در یک قالین زیبا</p>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <div class="price">
+              <span class="old-price">۶,۰۰۰,۰۰۰ </span>
+              <span class="new-price">۴,۸۰۰,۰۰۰ </span>
+            </div>
+            <div class="product-actions">
+              <button class="buy-btn">🛒 خرید</button>
+              <button class="details-btn">🔍 مشاهده</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="Untitled copy copy.jpg" alt="فرش کلاسیک" />
+          </div>
+          <div class="product-info">
+            <h3>فرش کلاسیک</h3>
+            <p>سبک اصیل و شاهانه برای دکوراسیون لوکس</p>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <div class="price">
+              <span class="new-price">۵,۲۰۰,۰۰۰ </span>
+            </div>
+            <div class="product-actions">
+              <button class="buy-btn">🛒 خرید</button>
+              <button class="details-btn">🔍 مشاهده</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="XXL.webp" alt="فرش دستبافت" />
+            <span class="badge">⭐ خاص</span>
+          </div>
+          <div class="product-info">
+            <h3>فرش دستبافت</h3>
+            <p>یک شاهکار هنری با نخ‌های طبیعی</p>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <div class="price">
+              <span class="old-price">۱۵,۰۰۰,۰۰۰ </span>
+              <span class="new-price">۱۲,۹۰۰,۰۰۰ </span>
+            </div>
+            <div class="product-actions">
+              <button class="buy-btn">🛒 خرید</button>
+              <button class="details-btn">🔍 مشاهده</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div style="border-bottom: 2px solid black; margin: 20px 0"></div>
+
+    <div style="padding-top: 150px; background: #f7f7f7"></div>
+
+    <div
+      style="
+        height: 200px;
+        background: #ff4d4d;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 0 20px;
+        text-align: center;
+      "
+    >
+      <!-- دکمه خرید در سمت چپ -->
+      <button
+        style="
+          background: #fff;
+          color: #ff4d4d;
+          border: none;
+          padding: 10px 20px;
+          font-size: 14px;
+          font-weight: bold;
+          border-radius: 25px;
+          cursor: pointer;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          transition: background 0.3s ease;
+        "
+        onmouseover="this.style.background='#ffcccc'"
+        onmouseout="this.style.background='#fff'"
+      >
+        خرید کنید
+      </button>
+
+      <!-- متن در وسط -->
+      <span
+        style="font-size: 16px; font-weight: bold; color: #fff; margin: 0 10px"
+      >
+        زیباترین فرش‌های دستباف ایرانی را اینجا پیدا کنید.
+      </span>
+
+      <!-- عکس در سمت راست -->
+      <img
+        src="handmade-traditional-textile-featuring-intricate-geometric-patterns-displayed-on-a-rolled-carpet-png.png"
+        style="width: 225px; height: 316px; border-radius: 15px"
+      />
+    </div>
+
+    <!-- عنوان بخش -->
+    <div
+      style="
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 120px 0 20px 0;
+      "
+    >
+      جدیدترین محصولات سایت
+    </div>
+    <!-- بخش محصولات -->
+    <div class="products-container">
+      <!-- محصول ۱ -->
+      <div class="product-box">
+        <div class="image-container">
+          <img src="3.png" alt="محصول ۱" />
+        </div>
+        <div class="product-name">محصول ۱</div>
+        <div class="product-price">۱۰۰,۰۰۰ تومان</div>
+        <button class="buy-button">خرید کنید</button>
+      </div>
+
+      <!-- محصول ۲ -->
+      <div class="product-box">
+        <div class="image-container">
+          <img src="4.png" alt="محصول ۲" />
+        </div>
+        <div class="product-name">محصول ۲</div>
+        <div class="product-price">۱۵۰,۰۰۰ تومان</div>
+        <button class="buy-button">خرید کنید</button>
+      </div>
+
+      <!-- محصول ۳ -->
+      <div class="product-box">
+        <div class="image-container">
+          <img src="5.jpg" alt="محصول ۳" />
+        </div>
+        <div class="product-name">محصول ۳</div>
+        <div class="product-price">۲۰۰,۰۰۰ تومان</div>
+        <button class="buy-button">خرید کنید</button>
+      </div>
+
+      <!-- محصول ۴ -->
+      <div class="product-box">
+        <div class="image-container">
+          <img src="6.jpg" alt="محصول ۴" />
+        </div>
+        <div class="product-name">محصول ۴</div>
+        <div class="product-price">۲۵۰,۰۰۰ تومان</div>
+        <button class="buy-button">خرید کنید</button>
+      </div>
+
+      <!-- محصول ۵ -->
+      <div class="product-box">
+        <div class="image-container">
+          <img src="about-us-pic3.png" alt="محصول ۵" />
+        </div>
+        <div class="product-name">محصول ۵</div>
+        <div class="product-price">۳۰۰,۰۰۰ تومان</div>
+        <button class="buy-button">خرید کنید</button>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px">
+      <a
+        href="#all-products"
+        style="
+          display: inline-block;
+          background-color: #690c07;
+          color: white;
+          font-size: 18px;
+          padding: 12px 25px;
+          text-decoration: none;
+          border-radius: 8px;
+          font-weight: bold;
+          transition: 0.3s;
+        "
+      >
+        مشاهده همه
+      </a>
+    </div>
+
+    <!-- بخش "چرا ما بهترین هستیم" -->
+    <!-- بخش "چرا ما بهترین هستیم" -->
+    <section class="why-us">
+      <h2>چرا ما بهترین هستیم؟</h2>
+      <div class="features">
+        <!-- ویژگی ۱: کیفیت بالا -->
+        <div class="feature">
+          <div class="feature-icon">
+            <i class="fas fa-award"></i>
+            <!-- آیکون کیفیت -->
+          </div>
+          <h3>کیفیت بی‌نظیر</h3>
+          <p>
+            قالی‌های ما با بهترین مواد اولیه و توسط هنرمندان مجرب بافته می‌شوند.
+          </p>
+        </div>
+
+        <!-- ویژگی ۲: تنوع طرح و رنگ -->
+        <div class="feature">
+          <div class="feature-icon">
+            <i class="fas fa-palette"></i>
+            <!-- آیکون تنوع -->
+          </div>
+          <h3>تنوع بی‌نظیر</h3>
+          <p>بیش از ۱۰۰۰ طرح و رنگ متنوع برای انتخاب شما آماده شده است.</p>
+        </div>
+
+        <!-- ویژگی ۳: قیمت مناسب -->
+        <div class="feature">
+          <div class="feature-icon">
+            <i class="fas fa-tag"></i>
+            <!-- آیکون قیمت -->
+          </div>
+          <h3>قیمت مناسب</h3>
+          <p>
+            با بهترین قیمت‌ها و گارانتی بازگشت وجه، خرید مطمئن را تجربه کنید.
+          </p>
+        </div>
+
+        <!-- ویژگی ۴: تحویل سریع -->
+        <div class="feature">
+          <div class="feature-icon">
+            <i class="fas fa-shipping-fast"></i>
+            <!-- آیکون تحویل -->
+          </div>
+          <h3>تحویل سریع</h3>
+          <p>تحویل سریع و رایگان در سراسر کشور در کمترین زمان ممکن.</p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="contact"
+      style="
+        background: #fafafa;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        color: #333;
+        text-align: center;
+      "
+    >
+      <h2
+        style="
+          font-size: 1.6rem;
+          color: #8b5a2b;
+          font-weight: bold;
+          margin-bottom: 10px;
+        "
+      >
+        📞 راه‌های ارتباطی با فروشگاه قالین ارگ
+      </h2>
+      <p style="font-size: 0.9rem; color: #5a3e1b; margin-bottom: 15px">
+        برای خرید بهترین قالین‌ها و دریافت مشاوره، از راه‌های زیر با ما در تماس
+        باشید.
+      </p>
+
+      <!-- اطلاعات تماس -->
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          gap: 10px;
+          flex-wrap: wrap;
+          max-width: 1000px;
+          margin: 0 auto;
+        "
+      >
+        <div
+          style="
+            background: #ffffff;
+            padding: 8px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 30%;
+          "
+        >
+          <h3 style="font-size: 0.9rem; color: #8b5a2b">📍 آدرس</h3>
+          <p style="font-size: 0.8rem">
+            هرات، پاساژ امید، طبقه اول، فروشگاه قالین ارگ
+          </p>
+          <p><strong>ساعات کاری:</strong> شنبه تا پنج‌شنبه، ۹ صبح تا ۸ شب</p>
+          <p>
+            <a
+              href="https://maps.app.goo.gl/YOUR_LOCATION_LINK"
+              style="color: #8b5a2b; text-decoration: none; font-size: 0.8rem"
+              >📍 مشاهده در گوگل مپ</a
+            >
+          </p>
+        </div>
+        <div
+          style="
+            background: #ffffff;
+            padding: 8px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 30%;
+          "
+        >
+          <h3 style="font-size: 0.9rem; color: #8b5a2b">📧 ایمیل</h3>
+          <p>
+            <a
+              href="mailto:info@argcarpets.com"
+              style="color: #8b5a2b; text-decoration: none; font-size: 0.8rem"
+              >info@argcarpets.com</a
+            >
+          </p>
+          <p><strong>پشتیبانی ۲۴/۷:</strong> بله</p>
+        </div>
+        <div
+          style="
+            background: #ffffff;
+            padding: 8px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 30%;
+          "
+        >
+          <h3 style="font-size: 0.9rem; color: #8b5a2b">📞 تلفن</h3>
+          <p>+93 799 654 321</p>
+          <p>
+            <a
+              href="https://wa.me/93799654321"
+              style="color: #8b5a2b; text-decoration: none; font-size: 0.8rem"
+              >ارسال پیام در واتساپ</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <!-- نقشه گوگل -->
+      <div
+        style="
+          margin-top: 20px;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+        "
+      >
+        <iframe
+          width="100%"
+          height="150"
+          frameborder="0"
+          style="border: 0; border-radius: 6px"
+          src="https://maps.google.com/maps?q=34.3525,62.2040&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <!-- فرم تماس -->
+      <div
+        style="
+          max-width: 400px;
+          margin-left: auto;
+          margin-right: auto;
+          background: #ffffff;
+          padding: 15px;
+          border-radius: 6px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          margin-top: 20px;
+        "
+      >
+        <h3 style="font-size: 1rem; color: #8b5a2b">📩 درخواست مشاوره</h3>
+        <form action="#" method="post">
+          <label for="name" style="font-size: 0.8rem; font-weight: bold"
+            >نام:</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="نام شما"
+            required
+            style="
+              width: 100%;
+              padding: 8px;
+              margin-top: 5px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              font-size: 0.9rem;
+              margin-bottom: 10px;
+            "
+          />
+
+          <label for="phone" style="font-size: 0.8rem; font-weight: bold"
+            >شماره تماس:</label
+          >
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="شماره تماس شما"
+            required
+            style="
+              width: 100%;
+              padding: 8px;
+              margin-top: 5px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              font-size: 0.9rem;
+              margin-bottom: 10px;
+            "
+          />
+
+          <label for="message" style="font-size: 0.8rem; font-weight: bold"
+            >سوال شما:</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            rows="3"
+            placeholder="سوال خود را بنویسید"
+            required
+            style="
+              width: 100%;
+              padding: 8px;
+              margin-top: 5px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              font-size: 0.9rem;
+              margin-bottom: 15px;
+            "
+          ></textarea>
+
+          <button
+            type="submit"
+            style="
+              background: #8b5a2b;
+              color: white;
+              padding: 8px 12px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              width: 100%;
+              font-size: 0.9rem;
+            "
+          >
+            📨 ارسال درخواست
+          </button>
+        </form>
+      </div>
+
+      <!-- شبکه‌های اجتماعی -->
+      <div style="margin-top: 20px; text-align: center">
+        <h3 style="font-size: 1rem; color: #8b5a2b">🌍 ما را دنبال کنید</h3>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 10px;
+          "
+        >
+          <a
+            href="#"
+            style="font-size: 1.2rem; color: #8b5a2b; text-decoration: none"
+            >🔵</a
+          >
+          <a
+            href="#"
+            style="font-size: 1.2rem; color: #1da1f2; text-decoration: none"
+            >🐦</a
+          >
+          <a
+            href="#"
+            style="font-size: 1.2rem; color: #e4405f; text-decoration: none"
+            >📷</a
+          >
+          <a
+            href="#"
+            style="font-size: 1.2rem; color: #25d366; text-decoration: none"
+            >💬</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer
+      style="
+        background: #c0392b;
+        color: white;
+        padding: 20px 0;
+        font-family: 'Vazirmatn', sans-serif;
+      "
+    >
+      <div
+        style="
+          max-width: 1200px;
+          margin: auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 10px;
+        "
+      >
+        <div style="flex: 1; min-width: 180px; padding: 5px">
+          <h3 style="font-size: 16px">نماد اعتماد الکترونیک</h3>
+          <p style="font-size: 14px">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+          </p>
+          <div style="display: flex; gap: 5px">
+            <div
+              style="
+                border: 1px dashed white;
+                padding: 10px;
+                text-align: center;
+                font-size: 12px;
+              "
+            >
+              مجوز
+            </div>
+            <div
+              style="
+                border: 1px dashed white;
+                padding: 10px;
+                text-align: center;
+                font-size: 12px;
+              "
+            >
+              مجوز
+            </div>
+          </div>
+        </div>
+
+        <div style="flex: 1; min-width: 180px; padding: 5px">
+          <h3 style="font-size: 16px">مرکز پشتیبانی</h3>
+          <ul style="list-style: none; padding: 0; font-size: 14px">
+            <li>باشگاه مشتریان</li>
+            <li>همکاری با فروشگاه‌ها</li>
+            <li>فرصت‌های شغلی</li>
+            <li>تخفیف‌ها</li>
+          </ul>
+        </div>
+
+        <div style="flex: 1; min-width: 180px; padding: 5px">
+          <h3 style="font-size: 16px">خدمات مشتریان</h3>
+          <ul style="list-style: none; padding: 0; font-size: 14px">
+            <li>مرکز پشتیبانی آنلاین</li>
+            <li>قوانین و مقررات</li>
+            <li>حریم خصوصی</li>
+            <li>سوالات متداول</li>
+          </ul>
+        </div>
+
+        <div style="flex: 1; min-width: 180px; padding: 5px">
+          <h3 style="font-size: 16px">دسترسی سریع</h3>
+          <ul style="list-style: none; padding: 0; font-size: 14px">
+            <li>صفحه اصلی</li>
+            <li>فروشگاه</li>
+            <li>درباره ما</li>
+            <li>ارتباط با ما</li>
+          </ul>
+        </div>
+
+        <div
+          style="
+            flex: 1;
+            min-width: 220px;
+            background: #ecf0f1;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: right;
+            color: black;
+            font-size: 14px;
+          "
+        >
+          <h3 style="color: #c0392b; font-size: 16px">آنلاین شاپ فرش و موکت</h3>
+          <p>لوازم خانه و دیکوریشن</p>
+          <p><strong>نشانی فروشگاه:</strong> لورم ایپسوم متن ساختگی...</p>
+          <p><strong>تلفن‌های تماس:</strong> 0911-1234567</p>
+        </div>
+      </div>
+
+      <p style="text-align: center; margin-top: 10px; font-size: 12px">
+        تمامی حقوق متعلق به سایت آماده فروش و قالین است.
+      </p>
+    </footer>
+
+    <!-- اسکریپت‌های مورد نیاز -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+      // تایمر معکوس
+      let minutes = 5;
+      let seconds = 0;
+
+      function updateTimer() {
+        const minutesElement = document.getElementById("minutes");
+        const secondsElement = document.getElementById("seconds");
+
+        if (seconds === 0) {
+          if (minutes === 0) {
+            clearInterval(timerInterval);
+            return;
+          }
+          minutes--;
+          seconds = 59;
+        } else {
+          seconds--;
+        }
+
+        minutesElement.textContent = String(minutes).padStart(2, "0");
+        secondsElement.textContent = String(seconds).padStart(2, "0");
+      }
+
+      const timerInterval = setInterval(updateTimer, 1000);
+
+      // فعال‌سازی اسلایدر با Slick
+      $(document).ready(function () {
+        $(".slick-slider").slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
